@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h2>Name Encryptor</h2>
+    <form name="myForm" action="" method="GET">
+        Enter your Name: <br><br>
+        <input id="myInput" type="text" name="inputbox" value="">
+        <input id="myBtn" type="button" name="button" value="Click" onClick="testResults(this.form)">
+    </form>
+    <div>
+        <br>
+        <span>Result: </span>
+        <span id="resultBox"></span>
+        <p>"This web meant to encrypt your name"</p>
+    </div>
+    <script>
+    var input = document.getElementById("myInput");
+    input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("myBtn").click();
+    }
+    })
+    function testResults (form) {
+        var result = ''
+        var inputValue = form.inputbox.value.toUpperCase();
+        //document.write ("You typed: " + inputValue.charAt(0));
+            for (let i = 0; i < inputValue.length; i++) {
+                if(inputValue[i]=='A'){
+                    result += 'O';
+                }
+                else if(inputValue[i]=='I'){
+                    result += 'E';
+                }
+                else if(inputValue[i]=='E'){
+                    result += 'I';
+                }
+                else if(inputValue[i]=='O'){
+                    result += 'A';
+                }
+                else if(inputValue[i]=='B'){
+                    result += 'Z';
+                }
+                else if(inputValue[i]=='C'){
+                    result += 'Y';
+                }
+                else if(inputValue[i]=='D'){
+                    result += 'X';
+                }
+                else if(inputValue[i]=='F'){
+                    result += 'W';
+                }
+                else if(inputValue[i]=='B'){
+                    result += 'V';
+                }
+                else if(inputValue[i]=='G'){
+                    result += 'U';
+                }
+                else if(inputValue[i]=='H'){
+                    result += 'T';
+                }
+                else if(inputValue[i]=='J'){
+                    result += 'S';
+                }
+                else if(inputValue[i]=='K'){
+                    result += 'R';
+                }
+                else if(inputValue[i]=='L'){
+                    result += 'Q';
+                }
+                else if(inputValue[i]=='M'){
+                    result += 'P';
+                }
+                else if(inputValue[i]=='P'){
+                    result += 'M';
+                }
+                else if(inputValue[i]=='Q'){
+                    result += 'L';
+                }
+                else if(inputValue[i]=='R'){
+                    result += 'K';
+                }
+                else if(inputValue[i]=='S'){
+                    result += 'J';
+                }
+                else if(inputValue[i]=='T'){
+                    result += 'H';
+                }
+                else if(inputValue[i]=='V'){
+                    result += 'G';
+                }
+                else if(inputValue[i]=='W'){
+                    result += 'F';
+                }
+                else if(inputValue[i]=='X'){
+                    result += 'D';
+                }
+                else if(inputValue[i]=='Y'){
+                    result += 'C';
+                }
+                else if(inputValue[i]=='Z'){
+                    result += 'B';
+                }
+                else{
+                    result += inputValue[i]
+                }
+            } 
+        document.getElementById("resultBox").innerHTML = result;  
+    }
+    </script>
+</body>
+</html>
